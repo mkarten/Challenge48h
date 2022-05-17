@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <link href="/static/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>signin</title>
+    <link rel="icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/home">Home</a>
+                <a class="nav-item nav-link" href="/profile">Profile</a>
+                <a class="nav-item nav-link" href="/signin">Signin</a>
+                <a class="nav-item nav-link" href="/signup">Signup</a>
+                <a class="nav-item nav-link" href="/signout">Signout</a>
+            </div>
+        </div>
+    </nav>
+    <form action="/signin-form" method="POST">
+        <div>
+            <label for="username">username</label>
+            <input type="text" placeholder="username" name="username" access="false" id="username" required="required" aria-required="true">
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input type="password" placeholder="password" name="password" access="false" id="password" required="required" aria-required="true">
+        </div>
+        <input type="submit" value="submit">
+    </form>
+    <div>{{error}}</div>
+</body>
+
+</html>
